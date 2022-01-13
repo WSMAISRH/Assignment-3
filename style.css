@@ -15,6 +15,17 @@ h1, h2, h3 {
 	margin: 40px auto;
 }
 
+/* from https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Opera and Firefox */
+}
+
 /* But your visualization should be full-width and full-height */
 .vis-holder {
   width: 100%;
@@ -30,6 +41,10 @@ h1, h2, h3 {
 /* The scatterplot will take the right half of the screen */
 .scatterplot-holder {
   flex: 1;  
+}
+
+.table-holder {
+	flex: 2
 }
 
 /* Default style for marks and channels used */
@@ -53,13 +68,17 @@ h1, h2, h3 {
 circle.selected {
   fill: pink;
   stroke: red;
-  opacity: 0.5;
+  opacity: 5;
 }
 
 /* Style for selected marks (table rows) */
 tr.selected {
   background-color: pink;
 }
+
+/* tr.selected:hover {
+	background-color: green;
+  } */
 
 /* Pretty table layout */
 table {
@@ -89,12 +108,12 @@ table.text-unselectable {
 }
 
 /* Recreate the D3 brush style... */
-tr.mouseover {
+tr:hover {
   background-color: #d6d6d6;
 }
 
 /* ...but add a darker selected and brushed color. */
-tr.mouseover.selected{
+tr.selected:hover{
   background-color: #e08fa3;
 }
 
