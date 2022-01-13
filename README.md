@@ -2,7 +2,7 @@
 
 This assignment will help you get started with brushing and linking. Please look through all these materials so you understand how to run and organize your code.
 
-Link to your page: https://github.com/WSMAISRH/Assignment-3/blob/gh-pages/README.md
+Link to your page: https://github.com/WSMAISRH/Assignment-3/
 
 
 # Aim of the assignment
